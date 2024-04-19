@@ -8,7 +8,11 @@
         "@fontsource/coming-soon": "^5.0.8",
         "@mui/icons-material": "^5.15.5",
         "@mui/material": "^5.15.5",
+        "@types/react": "^18.2.79",
+        "@typescript-eslint/eslint-plugin": "^7.7.0",
+        "@typescript-eslint/parser": "^7.7.0",
         "aws-amplify": "^6.0.28",
+        "eslint-config-airbnb-typescript": "^18.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.55.0"

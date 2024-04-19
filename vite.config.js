@@ -21,7 +21,7 @@ export default defineConfig({
     envCompatible(),
     checker({
       eslint: {
-        lintCommand: 'eslint "./src/**/*.{js,jsx}"',
+        lintCommand: 'tslint "./src/**/*.{ts,tsx}"',
       },
     }),
     svgrPlugin({

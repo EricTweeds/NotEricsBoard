@@ -35,7 +35,8 @@ const RESPONSES = [
 const CORRECT = "I didn't think you would actually get it";
 
 const App = () => {
-  const client = generateClient();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const client: any = generateClient();
 
   const [tempUrl, setTempUrl] = useState("");
   const [tempIsImage, setTempIsImage] = useState(false);

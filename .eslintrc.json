@@ -5,25 +5,27 @@
     },
     "ignorePatterns": ["/build"],
     "extends": [
+      "plugin:@typescript-eslint/recommended",
       "plugin:react/recommended",
-      "airbnb",
+      "airbnb-typescript",
       "plugin:prettier/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaFeatures": {
-        "jsx": true
+        "tsx": true
       },
       "ecmaVersion": "latest",
-      "sourceType": "module"
+      "sourceType": "module",
+      "project": "tsconfig.json"
     },
     "plugins": ["react", "react-hooks", "prettier"],
     "rules": {
-      "import/no-unresolved": "error",
-      "react/jsx-filename-extension": [0],
+      "react/tsx-filename-extension": [0],
       "import/no-extraneous-dependencies": 0,
       "import/extensions": "off",
       "linebreak-style": "off",
-      "react/jsx-props-no-spreading": 0,
+      "react/tsx-props-no-spreading": 0,
       "react/function-component-definition": [
         "error",
         {
@@ -39,12 +41,13 @@
         {
           "endOfLine": "auto"
         }
-      ]
+      ],
+      "import/no-unresolved": "off"
     },
     "settings": {
       "import/resolver": {
         "node": {
-          "extensions": [".js", ".jsx"]
+          "extensions": [".ts", ".tsx"]
         }
       }
     }
