@@ -108,7 +108,11 @@ const App = () => {
         <span>NOT ERIC&apos;S BOARD</span>
       </div>
       {isImage ? (
-        <img width="90%" src={url} alt="kyle what are you doing?" />
+        <img
+          style={{ maxHeight: "500px" }}
+          src={url}
+          alt="kyle what are you doing?"
+        />
       ) : (
         <iframe title="meme" src={url} height="90%" width="90%" />
       )}
