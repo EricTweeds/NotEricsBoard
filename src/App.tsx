@@ -32,6 +32,7 @@ const RESPONSES = [
   "Yep that's it, Sike!",
   "Try Password",
   "Yawn",
+  "Not Today",
 ];
 
 const CORRECT = "I didn't think you would actually get it";
