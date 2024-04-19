@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyd90ef427babc4-staging-ccc65-authRole",
+      "UnauthRoleArn": "arn:aws:iam::336231052303:role/amplify-amplifyd90ef427babc4-staging-ccc65-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::336231052303:role/amplify-amplifyd90ef427babc4-staging-ccc65-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-amplifyd90ef427babc4-staging-ccc65-deployment",
+      "UnauthRoleName": "amplify-amplifyd90ef427babc4-staging-ccc65-unauthRole",
+      "StackName": "amplify-amplifyd90ef427babc4-staging-ccc65",
+      "StackId": "arn:aws:cloudformation:us-east-2:336231052303:stack/amplify-amplifyd90ef427babc4-staging-ccc65/93e0bc00-fe03-11ee-9f03-0a7be57a0d55",
+      "AmplifyAppId": "d3i4x9n7fzj6lu"
+    },
+    "categories": {
+      "api": {
+        "NotEricsBoard": {}
+      }
+    }
+  }
+}

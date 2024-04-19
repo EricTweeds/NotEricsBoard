@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "NotEricsBoard",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-04-19T15:27:45.317Z"
+}

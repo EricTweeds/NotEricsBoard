@@ -1,0 +1,6 @@
+type Links @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  url: String
+  date: String
+  isImage: Boolean
+} 

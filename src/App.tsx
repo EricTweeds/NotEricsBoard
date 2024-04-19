@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 
 import { generateClient } from "aws-amplify/data";
+import { createLinks } from "./graphql/mutations";
+import { listLinks } from "./graphql/queries";
 
 import styles from "./App.module.scss";
 
@@ -47,10 +49,13 @@ const App = () => {
   const [snack, setSnack] = useState("");
 
   const loadData = async () => {
-    const { data } = await client.models.Links.list();
+    // List all items
+    const allLinkss = await client.graphql({
+      query: listLinks,
+    });
 
-    setUrl(data[0].url);
-    setIsImage(data[0].isImage);
+    setUrl(allLinkss[0].url);
+    setIsImage(allLinkss[0].isImage);
   };
 
   useEffect(() => {
@@ -79,10 +84,15 @@ const App = () => {
     setIsImage(false);
     setPass("");
 
-    await client.models.Links.create({
-      url: tempUrl,
-      isImage: tempIsImage,
-      date: Date.now().toString(),
+    await client.graphql({
+      query: createLinks,
+      variables: {
+        input: {
+          url: tempUrl,
+          date: Date.now().toString(),
+          isImage: tempIsImage,
+        },
+      },
     });
   };
   return (
