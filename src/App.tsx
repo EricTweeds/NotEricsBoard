@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect } from "react";
 import {
   Button,
@@ -44,7 +45,7 @@ const App = () => {
   const [tempUrl, setTempUrl] = useState("");
   const [tempIsImage, setTempIsImage] = useState(false);
   const [isImage, setIsImage] = useState(false);
-  const [url, setUrl] = useState("https://imgs.xkcd.com/");
+  const [url, setUrl] = useState("https://xkcd.com/");
   const [pass, setPass] = useState("");
   const [open, setOpen] = useState(false);
   const [snack, setSnack] = useState("");
@@ -54,9 +55,14 @@ const App = () => {
     const allLinkss = await client.graphql({
       query: listLinks,
     });
+    const links = allLinkss.data.listLinks.items.sort(
+      (a: any, b: any) => Date.parse(a.updatedAt) - Date.parse(b.updatedAt)
+    );
 
-    setUrl(allLinkss[0].url);
-    setIsImage(allLinkss[0].isImage);
+    const idx = links.length - 1;
+
+    setUrl(links[idx].url);
+    setIsImage(links[idx].isImage);
   };
 
   useEffect(() => {
