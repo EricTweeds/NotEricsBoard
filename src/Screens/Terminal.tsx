@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
+// eslint-disable-next-line
 import pipboy from "./fall-out.gif";
 
 import styles from "./Terminal.module.scss";
 
 const wordBank = [
-  "Abide", "Adobe", "Adept", "Agent", "Aside", "Asset", "Avail", "Basic", "Blade", "Blaze",
+  "Abide","Adobe", "Adept", "Agent", "Aside", "Asset", "Avail", "Basic", "Blade", "Blaze",
   "Blend", "Bloat", "Block", "Blurb", "Bunch", "Candy", "Check", "Child", "Chime", "Claim",
   "Click", "Cliff", "Clove", "Craft", "Crawl", "Crazy", "Creek", "Crisp", "Curly", "Cycle",
   "Daisy", "Death", "Delta", "Disco", "Donor", "Draft", "Dream", "Drive", "Eager", "Easel",

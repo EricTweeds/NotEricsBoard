@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import envCompatible from "vite-plugin-env-compatible";
 import svgrPlugin from "vite-plugin-svgr";
-import checker from "vite-plugin-checker";
+// import checker from "vite-plugin-checker";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,11 +19,6 @@ export default defineConfig({
   plugins: [
     react(),
     envCompatible(),
-    checker({
-      eslint: {
-        lintCommand: 'tslint "./src/**/*.{ts,tsx}"',
-      },
-    }),
     svgrPlugin({
       svgrOptions: {
         // svgr options
