@@ -134,7 +134,7 @@ const Terminal = () => {
           break;
         }
         let line = [...codeLines[currPos[0]]];
-        const selectedWord = line.slice(currPos[1], currPos[1] + currPos[2]).join("").toLowerCase();
+        const selectedWord = line?.slice(currPos[1], currPos[1] + currPos[2]).join("").toLowerCase();
         let currFeedback = [...feedback];
         currFeedback.push(`>${selectedWord.toUpperCase()}`);
         if (selectedWord === password.toLowerCase()) {
@@ -260,7 +260,7 @@ const Terminal = () => {
       <div className={styles.feedback}>{feedback.map((f, i) => {
         return <div key={i}>{f}</div>;
       })}
-      <div>{`>${codeLines[cursor[0]].slice(cursor[1], cursor[1] + cursor[2]).join("").toUpperCase()}`}</div>
+      <div>{`>${codeLines[cursor[0]]?.slice(cursor[1], cursor[1] + cursor[2]).join("").toUpperCase()}`}</div>
       </div>
     </div>
   )
